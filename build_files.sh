@@ -1,4 +1,4 @@
 echo "START"
-python3.10.7 -m pip install -r requirements.txt
-python3.10.7 manage.py collectstatic --noinput --clear
+python3 -m pip install -r requirements.txt
+python3 manage.py collectstatic --noinput --clear
 echo "END"
