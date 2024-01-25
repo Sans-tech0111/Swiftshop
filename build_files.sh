@@ -5,7 +5,7 @@ PYTHON_PATH=$(which python3.9)
 
 
 if [ -z "$PYTHON_PATH" ]; then
-    echo "Python 3.10.7 not found. Make sure it's installed and in your PATH."
+    echo "Python 3.9 not found. Make sure it's installed and in your PATH."
     exit 1
 fi
 
