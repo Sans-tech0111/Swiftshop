@@ -12,8 +12,9 @@
 						<div class="form-field col-lg-6">
 							<input required class="form-control" type="email" name="email" placeholder="Email">
 						</div>
-                    <hr>
+                   
                     </div>
+			<hr>
                     <div id="shipping-info" class="row" >
 						<p>Shipping Information:</p>
 						<hr>
@@ -137,7 +138,6 @@
                 body:JSON.stringify({'form':userFormData,'shipping':shippingInfo})
             }).then((response)=>{
 		    response.json()
-		    alert('Data Sent.......');
 	    })
             .then((data)=>{
                 console.log('success:',data),
