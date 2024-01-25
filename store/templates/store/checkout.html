@@ -136,7 +136,10 @@
                     'X-CSRFToken':csrftoken,
                 },
                 body:JSON.stringify({'form':userFormData,'shipping':shippingInfo})
-            }).then((response)=>response.json())
+            }).then((response)=>{
+		    response.json()
+		    alert('Data Sent.......');
+	    })
             .then((data)=>{
                 console.log('success:',data),
                 alert('Transaction completed');
