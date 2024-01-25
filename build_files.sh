@@ -1,7 +1,7 @@
 echo "START"
 
 
-PYTHON_PATH=$(which python3.10)
+PYTHON_PATH=$(which python3.9)
 
 
 if [ -z "$PYTHON_PATH" ]; then
