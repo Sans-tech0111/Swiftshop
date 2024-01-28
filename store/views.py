@@ -82,3 +82,6 @@ def processOrder(request):
     else:
         print("User not logged in..")
     return JsonResponse('Payment completed!',safe=False)
+
+def userLogin(request):
+    return render(request,'store/login.html')
