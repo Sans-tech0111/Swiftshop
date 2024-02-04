@@ -1,0 +1,28 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% block content %}
+<div class="container-sm rounded shadow" style="height: 400px;width: 350px;">
+    <form id="form" method="POST">
+        {% csrf_token %}
+        <div class="form-field">
+            <label for="username" class="form-label">Username</label>
+            <input type="text" name="username" id="username" placeholder="Username" required class="form-control">
+        </div>
+        <div class="form-field">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" name="email" id="email" placeholder="Email" required class="form-control">
+        </div>
+        <div class="form-field">
+            <label for="password1" class="form-label">Password</label>
+            <input type="password" name="password1" id="password1" placeholder="Type your password" required class="form-control">
+        </div>
+        <div class="form-field">
+            <label for="password2" class="form-label">Confirm password</label>
+            <input type="password" name="password2" id="password2" placeholder="Confirm your password" required class="form-control">
+        </div>
+        <hr>
+        <input type="submit" value="SignUp" class="btn btn-primary" style="width: 80px;">
+        <a href="{% url 'user_login' %}" style="float: right;text-decoration: none;font-size: 12px;">I already have an account</a>
+    </form>
+</div>
+{% endblock content%}
