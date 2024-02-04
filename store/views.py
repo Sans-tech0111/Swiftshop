@@ -1,9 +1,11 @@
 import datetime
 import json
-from django.http import JsonResponse
-from django.shortcuts import render
+from django.http import JsonResponse,HttpResponse
+from django.shortcuts import render,redirect
 from .models import *
 from .utils import cookieCart,cartData
+from django.contrib.auth.models import User
+from django.contrib.auth import authenticate,login
 
 def store(request):
     data = cartData(request)
